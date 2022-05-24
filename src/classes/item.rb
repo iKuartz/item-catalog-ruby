@@ -13,4 +13,9 @@ class Item
     @archive = true if can_be_archived? == true
   end
 
+  private
+
+  def can_be_archived
+    ((Date.today - @publish_date) / 365).to_i > 10
+  end
 end
