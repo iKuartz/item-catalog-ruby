@@ -6,7 +6,7 @@ class Item
 
   def initialize(publish_date)
     @id = id
-    @publish_date = publish_date
+    @publish_date = Date.parse(publish_date)
     # The two objects above will be generated in the SQL db, so no need to randomize here
     @archived = false
   end
@@ -17,7 +17,7 @@ class Item
 
   def genre=(genre)
     @genre = genre
-    genre..item.push(self) unless label.item.include?(self)
+    genre..item.push(self) unless genre.item.include?(self)
   end
 
   def label=(label)
@@ -27,7 +27,7 @@ class Item
 
   def author=(author)
     @author = author
-    author..item.push(self) unless label.item.include?(self)
+    author..item.push(self) unless author.item.include?(self)
   end
 
   def to_json(*args)
