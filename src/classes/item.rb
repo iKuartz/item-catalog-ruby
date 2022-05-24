@@ -13,14 +13,26 @@ class Item
     @archive = true if can_be_archived? == true
   end
 
+  def genre=(genre)
+    @genre = genre
+    genre..item.push(self) unless label.item.include?(self)
+  end
+
   def label=(label)
     @label = label
     label.item.push(self) unless label.item.include?(self)
   end
 
+  def author=(author)
+    @author = author
+    author..item.push(self) unless label.item.include?(self)
+  end
+
+# Here will be the json object creator
+
   private
 
-  def can_be_archived
-    ((Date.today - @publish_date) / 365).to_i > 10
+  def can_be_archived?
+    Date.today.year - @published_date.year >= 10
   end
 end
