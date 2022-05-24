@@ -13,6 +13,11 @@ class Item
     @archive = true if can_be_archived? == true
   end
 
+  def label=(label)
+    @label = label
+    label.item.push(self) unless label.item.include?(self)
+  end
+
   private
 
   def can_be_archived
