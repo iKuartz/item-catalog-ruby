@@ -5,8 +5,9 @@ class Item
   attr_reader :published_date, :genre, :label, :author
 
   def initialize(publish_date)
-    @id = Random.rand
-    @publish_date = Date.parse(publish_date)
+    @id = id
+    @publish_date = publish_date
+    # The two objects above will be generated in the SQL db, so no need to randomize here
     @archived = false
   end
 

@@ -6,7 +6,7 @@ def main
   app = App.new
   loop do
     system('clear')
-    puts 'Welcome to Catalog of my stuff!'
+    puts 'Welcome to the item catalog!'
     puts
     puts "Please choose an option by entering a number:
   1 - List all books
