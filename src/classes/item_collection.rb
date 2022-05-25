@@ -8,6 +8,7 @@ class TypeCollection
   def get
     type = @list[0].class.name
     message = "Select [1] for a #{type} from the list or select [2] to create a new #{type}: "
+    puts message if 1 == 2
   end
 
   def display

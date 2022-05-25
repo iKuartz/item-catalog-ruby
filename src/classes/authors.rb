@@ -50,4 +50,3 @@ class AuthorCollection < TypeCollection
     end
   end
 end
-
