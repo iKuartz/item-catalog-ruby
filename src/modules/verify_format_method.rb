@@ -74,4 +74,22 @@ module CommonChecks
     end
     option
   end
+
+  def good_or_bad(message: 'Please type good or bad', error: 'Please type only good or bad.')
+    option = 'good'
+    loop do
+      print message
+      evaluate = gets.chomp.downcase
+      case evaluate
+      when 'bad'
+        option = 'bad'
+        break
+      when 'good'
+        break
+      else
+        puts error
+      end
+    end
+    option
+  end
 end
