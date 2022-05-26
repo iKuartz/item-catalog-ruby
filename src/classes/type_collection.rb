@@ -18,4 +18,4 @@ class TypeCollection
   def display
     puts @list
   end
-  end
+end
