@@ -1,4 +1,4 @@
-require_relative '../modules/common_checks'
+require_relative '../modules/verify_format_method'
 
 class TypeCollection
   attr_reader :list

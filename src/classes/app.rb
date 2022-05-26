@@ -10,12 +10,12 @@ class App
   include JsonHandler
 
   def initialize
-    @books = Books.new
-    @games = Games.new
-    @musics = Musics.new
-    @genres = Genres.new
-    @authors = Authors.new
-    @labels = Labels.new
+    @books = BooksCollection.new
+    @games = GameCollection.new
+    @musics = MusicCollection.new
+    @genres = GenreCollection.new
+    @authors = AuthorCollection.new
+    @labels = LabelCollection.new
   end
 
   def run(num)
