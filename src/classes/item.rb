@@ -4,9 +4,9 @@ class Item
   require_relative '../modules/json_methods'
   attr_reader :published_date, :genre, :label, :author
 
-  def initialize(publish_date)
+  def initialize(id, publish_date)
     @id = id
-    @publish_date = Date.parse(publish_date)
+    @publish_date = publish_date
     # The two objects above will be generated in the SQL db, so no need to randomize here
     @archived = false
   end
@@ -17,17 +17,17 @@ class Item
 
   def genre=(genre)
     @genre = genre
-    genre..item.push(self) unless genre.item.include?(self)
+    genre.items.push(self) unless genre.items.include?(self)
   end
 
   def label=(label)
     @label = label
-    label.item.push(self) unless label.item.include?(self)
+    label.items.push(self) unless label.items.include?(self)
   end
 
   def author=(author)
     @author = author
-    author..item.push(self) unless author.item.include?(self)
+    author.items.push(self) unless author.items.include?(self)
   end
 
   def to_json(*args)

@@ -13,12 +13,13 @@ class BooksCollection
   end
 
   def add(genre_coll, label_coll, author_coll)
+    id = verify_int(message: 'ID: ', error: 'Please input correct numeric id: ')
     publish_date = verify_date(message: 'Publish Date [yyyy-mm-dd]: ',
                                error: 'Please input date in the correct format yyyy-mm-dd: ')
     publisher = verify_str(message: 'Write the name of the publisher: ')
     cover_state = good_or_bad(message: 'What is the current state of the book cover (good/bad): ',
                               error: 'Please type good or bad only: ')
-    new_book = Book.new(publisher, cover_state, publish_date)
+    new_book = Book.new(publisher, cover_state, id, publish_date)
     new_book.genre = genre_coll.get
     new_book.author = author_coll.get
     new_book.label = label_coll.get

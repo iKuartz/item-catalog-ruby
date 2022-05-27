@@ -2,6 +2,7 @@ require_relative '../modules/json_methods'
 
 class Label
   attr_reader :title, :color
+  attr_accessor :items
 
   include JsonMethods
 
@@ -14,7 +15,7 @@ class Label
 
   def add_item(item)
     @items << item unless @items.include?(item)
-    item.label = self unless item.author == self
+    item.label = self unless item.label == self
   end
 
   def self.json_create(object)
