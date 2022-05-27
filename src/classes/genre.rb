@@ -2,7 +2,6 @@ require_relative '../modules/json_methods'
 
 class Genre
   attr_reader :name
-  attr_accessor :items
 
   include JsonMethods
 

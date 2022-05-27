@@ -2,7 +2,6 @@ require_relative '../modules/json_methods'
 
 class Author
   attr_reader :first_name, :last_name
-  attr_accessor :items
 
   include JsonMethods
 

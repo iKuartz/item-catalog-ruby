@@ -2,7 +2,6 @@ require_relative '../modules/json_methods'
 
 class Label
   attr_reader :title, :color
-  attr_accessor :items
 
   include JsonMethods
 

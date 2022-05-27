@@ -1,7 +1,8 @@
 require 'date'
+require_relative '../modules/json_methods'
 
 class Item
-  require_relative '../modules/json_methods'
+  include JsonMethods
   attr_reader :published_date, :genre, :label, :author
 
   def initialize(id, published_date)
@@ -11,22 +12,23 @@ class Item
   end
 
   def move_to_archive
-    @archive = true if can_be_archived? == true
+    @archived = can_be_archived?
+    @archived
   end
 
   def genre=(genre)
     @genre = genre
-    genre.items.push(self) unless genre.items.include?(self)
+    genre.add_item(self)
   end
 
   def label=(label)
     @label = label
-    label.items.push(self) unless label.items.include?(self)
+    label.add_item(self)
   end
 
   def author=(author)
     @author = author
-    author.items.push(self) unless author.items.include?(self)
+    author.add_item(self)
   end
 
   def to_json(*args)
