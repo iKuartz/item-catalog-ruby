@@ -1,0 +1,23 @@
+[
+  {
+    "json_class": "Genre",
+    "arguments": [
+      1,
+      "thriller"
+    ]
+  },
+  {
+    "json_class": "Genre",
+    "arguments": [
+      2,
+      "suspense"
+    ]
+  },
+  {
+    "json_class": "Genre",
+    "arguments": [
+      3,
+      "science fiction"
+    ]
+  }
+]

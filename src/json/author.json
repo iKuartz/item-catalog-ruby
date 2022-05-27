@@ -1,0 +1,18 @@
+[
+  {
+    "json_class": "Author",
+    "arguments": [
+      1,
+      "Agatha",
+      "Christie"
+    ]
+  },
+  {
+    "json_class": "Author",
+    "arguments": [
+      2,
+      "Maya",
+      "Angelou"
+    ]
+  }
+]

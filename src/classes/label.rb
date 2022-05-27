@@ -11,6 +11,7 @@ class Label
     @title = title
     @color = color
     @items = []
+    @args = [id, title, color]
   end
 
   def add_item(item)

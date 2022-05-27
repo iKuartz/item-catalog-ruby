@@ -1,0 +1,38 @@
+[
+  {
+    "json_class": "Book",
+    "arguments": [
+      [
+        "Local",
+        "good",
+        123,
+        null
+      ],
+      [
+        {
+          "json_class": "Genre",
+          "arguments": [
+            2,
+            "suspense"
+          ]
+        },
+        {
+          "json_class": "Label",
+          "arguments": [
+            2,
+            "New",
+            "Blue"
+          ]
+        },
+        {
+          "json_class": "Author",
+          "arguments": [
+            2,
+            "Maya",
+            "Angelou"
+          ]
+        }
+      ]
+    ]
+  }
+]

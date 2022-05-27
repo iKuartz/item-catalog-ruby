@@ -1,4 +1,4 @@
-require_relative './type_collection'
+require_relative './item_collection'
 require_relative './genre'
 require_relative '../modules/json_handler'
 

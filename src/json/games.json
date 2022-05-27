@@ -1,0 +1,44 @@
+[
+  {
+    "json_class": "Game",
+    "arguments": [
+      [
+        true,
+        {
+          "json_class": "Date",
+          "y": 2021,
+          "m": 1,
+          "d": 1,
+          "sg": 2299161.0
+        },
+        321,
+        null
+      ],
+      [
+        {
+          "json_class": "Genre",
+          "arguments": [
+            2,
+            "suspense"
+          ]
+        },
+        {
+          "json_class": "Label",
+          "arguments": [
+            1,
+            "Gift",
+            "Yellow"
+          ]
+        },
+        {
+          "json_class": "Author",
+          "arguments": [
+            1,
+            "Agatha",
+            "Christie"
+          ]
+        }
+      ]
+    ]
+  }
+]
