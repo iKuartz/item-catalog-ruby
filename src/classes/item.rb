@@ -4,10 +4,9 @@ class Item
   require_relative '../modules/json_methods'
   attr_reader :published_date, :genre, :label, :author
 
-  def initialize(id, publish_date)
+  def initialize(id, published_date)
     @id = id
-    @publish_date = publish_date
-    # The two objects above will be generated in the SQL db, so no need to randomize here
+    @published_date = published_date
     @archived = false
   end
 

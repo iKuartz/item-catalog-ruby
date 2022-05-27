@@ -21,9 +21,7 @@ module CommonChecks
     int.to_i
   end
 
-  def verify_date(message: 'Enter the date in the format yyyy-mm-dd:',\
-                  error: 'Unacceptable Value.'\
-                         ' Please enter an acceptable date in the format yyyy-mm-dd:')
+  def verify_date(message: 'Enter the date in the format yyyy-mm-dd:', error: 'Please input date in the correct format: ')
     print message
     date = gets.chomp.strip
 

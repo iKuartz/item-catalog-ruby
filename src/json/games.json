@@ -6,13 +6,19 @@
         true,
         {
           "json_class": "Date",
-          "y": 2021,
-          "m": 1,
-          "d": 1,
+          "y": 2020,
+          "m": 2,
+          "d": 2,
           "sg": 2299161.0
         },
-        321,
-        null
+        123,
+        {
+          "json_class": "Date",
+          "y": 2020,
+          "m": 2,
+          "d": 2,
+          "sg": 2299161.0
+        }
       ],
       [
         {
@@ -25,17 +31,17 @@
         {
           "json_class": "Label",
           "arguments": [
-            1,
-            "Gift",
-            "Yellow"
+            2,
+            "New",
+            "Blue"
           ]
         },
         {
           "json_class": "Author",
           "arguments": [
-            1,
-            "Agatha",
-            "Christie"
+            2,
+            "Maya",
+            "Angelou"
           ]
         }
       ]
